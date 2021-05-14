@@ -19,7 +19,7 @@ This is a repository for the Personal Contribution of studying Spring Webflux
   - Signals
   - Operators
 * Tutorial
-  - [Example application](https://github.wdf.sap.corp/I523125/webflux-examples)
+  - [Example application](https://github.com/eduardoarndt/spring-webflux-example)
 * Tools
   - Testing
   - Debugging
