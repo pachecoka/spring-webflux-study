@@ -1,6 +1,6 @@
 # What is Reactive Programming?
 
-The reactive paradigm is based on the [Reactive Manifesto](https://www.reactivemanifesto.org/), it allows you to build robust systems, resilient to high load by implementing [asynchronous](https://www.reactivemanifesto.org/glossary#Asynchronous), [non-blocking](https://www.reactivemanifesto.org/glossary#Non-Blocking) operations, aliviating the system's [backpressure](https://www.reactivemanifesto.org/glossary#Back-Pressure). 
+The reactive paradigm is based on the [Reactive Manifesto](https://www.reactivemanifesto.org/), it allows you to build robust systems, resilient to high load by implementing [asynchronous](https://www.reactivemanifesto.org/glossary#Asynchronous), [non-blocking](https://www.reactivemanifesto.org/glossary#Non-Blocking) operations, alleviating the system's [backpressure](https://www.reactivemanifesto.org/glossary#Back-Pressure). 
 
 This paradigm is concerned with data streams, it's possible to express data streams in the static form (e.g. strings, arrays) or dynamic (e.g. event emiters).
 
