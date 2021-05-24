@@ -1,8 +1,6 @@
 # Spring Webflux Study
 This is a repository for the Personal Contribution of studying Spring Webflux
 
-[Examples repository](https://github.wdf.sap.corp/I523125/webflux-examples)
-
 ### Topics to be covered
 * [Non-reactive x Reactive](reactive-programming.md)
    - General overview of reactive programming
