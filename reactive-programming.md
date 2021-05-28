@@ -81,7 +81,7 @@ To bring this more closely to what we work with, let's take the example of Tax S
 
 When the application was designed for Cloud Foundry, one of the key aspects that were prioritized was performance, and to achieve that, the entry point micro service, the one that handles the requests, needed to be highly scalable and performatic.
 
-Hence, there was the decision to use Java with Spring Webflux stack for development of this entry point micro service, which is [Tax Maestro](https://github.wdf.sap.corp/tax-service/tax-maestro). With this, the points explained above regarding backpressure, resilience, and handling of threads can be achieved, by using the reactive programming technology. 
+Hence, there was the decision to use Java with Spring Webflux stack for development of this entry point micro service, which is Tax Maestro. With this, the points explained above regarding backpressure, resilience, and handling of threads can be achieved, by using the reactive programming technology. 
 
 ## Code Complexity
 
