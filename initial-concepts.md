@@ -260,16 +260,6 @@ integerMono.map(value -> {
 In the code above an exception is going to be thrown when dividing by zero. We can use `onErrorReturn` to return a default value for when an exception occurs. The `doOnNext` operator executes the print line method with the result of the operation, in this case, because of the exception, it will print the value 0.
 
 
-Example - An usage of `onErrorMap` in tax-maestro codebase
-```
-return quotePartner(destinationResponse, request)
-            .doOnNext(S::validate)
-            .onErrorMap(InvalidModelException.class, t -> new PartnerResponseInvalidModelException(t.getPropertyErrors(), 
-                destinationResponse.getName()));
-```
-In the code above, after the `quotePartner` method is executed, we execute the method `validate` of the generic object S.
-We use the operator `onErrorMap` to map one exception class to another one of our own. This is useful for capturing expected errors and rethrowing them with a more refined and detailed exception.
-
 ### Working with Time  
 
 Example - delay execution and timeout
