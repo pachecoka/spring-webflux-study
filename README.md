@@ -7,7 +7,7 @@ This is a repository for the Personal Contribution of studying Spring Webflux
    - Example
    - Use cases
    - Threading
-   - Tax Service's example
+   - Performance compared
 * [What is Spring?](what-is-spring.md)
    - The Spring framework
    - Spring WebFlux
