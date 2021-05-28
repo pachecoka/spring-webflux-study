@@ -2,7 +2,7 @@
 
 ## Streams
 
-As said on the [reactive programming wiki](https://github.wdf.sap.corp/i857732/webflux-study/blob/master/reactive-programming.md#project-reactor), Spring Webflux makes use of Project Reactor library, which implements the reactive programming model based on the **Reactive Streams** specification, therefore it is important to know what are Streams to understand the whole concept behind Reactive Programming.
+As said on the [reactive programming wiki](https://github.com/pachecoka/spring-webflux-study/blob/master/reactive-programming.md#project-reactor), Spring Webflux makes use of Project Reactor library, which implements the reactive programming model based on the **Reactive Streams** specification, therefore it is important to know what are Streams to understand the whole concept behind Reactive Programming.
 
 > In order for an application to be reactive, the first thing it must be able to do is to produce a stream of data.
 >
@@ -343,7 +343,7 @@ In this example we are using StepVerifier to test the behavior of `getElementsFi
 
 First, we create a StepVerifier builder with the `create` method. Next, we wrap our target test method. Following, the signal is verified with `expectNext`, here we could use `expectNext` multiple times, each with one element, or pass multiple elements to a single method call. `expectComplete` is then used to assert that the stream is executed. Finally, verify() is used to trigger the test.
 
-StepVerifier suits almost all cases of tests you want to do, it has many operators that facilitate testing. To keep this topic concise, you can check the references of this page, which includes links to blog posts about reactive streams testing and stepverifier documentation. You may also want to consult the tests included in the [example application](https://github.wdf.sap.corp/I523125/webflux-examples) built for this guide.
+StepVerifier suits almost all cases of tests you want to do, it has many operators that facilitate testing. To keep this topic concise, you can check the references of this page, which includes links to blog posts about reactive streams testing and stepverifier documentation. You may also want to consult the tests included in the [example application](https://github.com/eduardoarndt/spring-webflux-example) built for this guide.
 
 ### Testing REST APIs
 
