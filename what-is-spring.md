@@ -23,7 +23,7 @@ It is fully non-blocking, supports reactive streams back pressure, and uses Nett
 Spring WebFlux uses [project reactor](https://projectreactor.io/) as reactive library. Reactor is a Reactive Streams library and, therefore, all of its operators support non-blocking back pressure. It is developed in close collaboration with Spring.
 
 The reactive programming paradigm promotes an asynchronous, non-blocking, event-driven approach to data processing. 
-More information about reactive programming can be found on the page [Reactive Programming](https://github.wdf.sap.corp/i857732/webflux-study/blob/master/reactive-programming.md).
+More information about reactive programming can be found on the page [Reactive Programming](https://github.com/pachecoka/spring-webflux-study/blob/master/reactive-programming.md).
 
 
 ## References
