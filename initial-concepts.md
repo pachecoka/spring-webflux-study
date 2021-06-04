@@ -85,27 +85,30 @@ So let's see some examples of what we can do!
 
 There are many ways we can transform data streams, let's take a look at some of them.
 
-* Using `.map()`
+* Using `.map()` and `.flatMap()`
 
-```
-Flux<String> colors = Flux.just("red", "black", "tan");
-
-colors.map(color -> {
-    return color.length();
-})
-.doOnNext(System.out::println)
-.subscribe();
-```
-
-The `.map()` method can be used for 1-to-1 transformations. It is synchronous and non-blocking.
+The `.map()` method is for synchronous, non-blocking, 1-to-1 transformations.
 
 It is synchronous because it is a simple method call which emits a result, and non-blocking because it shouldn't introduce latency (shouldn't block the operator calling it).
 
-`.map()` should be used when you want to transform an object/data in fixed time.
+`.map()` should be used when you want to transform an object/data in fixed time (synchronously).
 
-* Using `.flatMap()`
+The `.flatMap()` method is for asynchronous, non-blocking, 1-to-N transformations.
 
-//TODO
+`.flatMap()` should be used when you require some asynch work to be done within it.
+
+```
+Mono<Person> person = Mono.just(Person("name", "age:12"));
+
+person.map { person ->
+      EnhancedPerson(person, "id-set", "savedInDb")
+  }.flatMap { person ->
+      reactiveMongoDb.save(person)
+  }
+```
+
+In the example, `.flatMap()` is used for saving a person in the database, because it’s an async operation for which time is never deterministic, while for converting the person into an EnhancedPerson object, `.map()` is used because it’s a synchronous operation for which time taken is always going to be deterministic.
+
 
 * Using `.collect()`
 
@@ -357,3 +360,5 @@ TODO
 4. [Reactor 3 Reference Guide](https://projectreactor.io/docs)
 5. [Testing Reactive Streams Using StepVerifier and TestPublisher](https://www.baeldung.com/reactive-streams-step-verifier-test-publisher)
 6. [StepVerifier](https://projectreactor.io/docs/test/release/api/reactor/test/StepVerifier.html)
+7. [Flux.map vs Flux.flatMap for a 1-to-1 operation](https://stackoverflow.com/questions/46634666/flux-map-vs-flux-flatmap-for-a-1-to-1-operation)
+8. [map vs flatMap in reactor](https://stackoverflow.com/questions/49115135/map-vs-flatmap-in-reactor)
