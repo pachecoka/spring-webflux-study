@@ -98,13 +98,11 @@ The `.flatMap()` method is for asynchronous, non-blocking, 1-to-N transformation
 `.flatMap()` should be used when you require some asynch work to be done within it.
 
 ```
-Mono<Person> person = Mono.just(Person("name", "age:12"));
-
-person.map { person ->
-      EnhancedPerson(person, "id-set", "savedInDb")
-  }.flatMap { person ->
-      reactiveMongoDb.save(person)
-  }
+Mono.just(new Person("Camila", 25)).map(person->
+  EnhancedPerson(person, "id-set", "savedInDb")
+).flatMap(enhancedPerson -> 
+  reactiveMongoDb.save(enhancedPerson)
+);
 ```
 
 In the example, `.flatMap()` is used for saving a person in the database, because it’s an async operation for which time is never deterministic, while for converting the person into an EnhancedPerson object, `.map()` is used because it’s a synchronous operation for which time taken is always going to be deterministic.
