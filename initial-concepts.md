@@ -296,8 +296,23 @@ Now, at the method `processColors`, we set a timeout for this remote call simula
 I have added a StepVerifier in the main method to execute and assert what is being done here.
 
 ### Splitting a Flux  
+
+There are methods that can be used to split a Flux<T> into a Flux<Flux<T>>. One of this methods is `.window(int size)`, as shown in the example below.
+  
 ```
-//TODO
+Flux.just(1, 2, 3, 4, 5)
+    .window(2)
+    .concatMap(Flux::collectList)
+    .doOnNext(System.out::println)
+    .subscribe();
+```
+  
+The example will split the Flux that consists of the numbers 1..5 into Lists of maximum size of two. The code will have the following output:
+  
+```
+[1, 2]
+[3, 4]
+[5]
 ```
 
 ### Going Back to the Synchronous World  
