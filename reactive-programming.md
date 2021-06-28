@@ -36,7 +36,7 @@ Here's a diagram which shows threads being stacked on waiting the database for a
 
 ### Efficiently serve more requests
 
-When implemeting the reactive programming model, you don't have blocked threads waiting for the database to respond. Instead, you execute your request and go on to processing other things, and only when the database has the result, you go back to processing from that point on.
+When implementing the reactive programming model, you don't have blocked threads waiting for the database to respond. Instead, you execute your request and go on to processing other things, and only when the database has the result, you go back to processing from that point on.
 
 Here's a diagram showing how our application would behave applying reactive programming: 
 
