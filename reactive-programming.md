@@ -30,7 +30,7 @@ Of course, every application has a limited pool of threads it can use. If you're
 
 That means that if you have 200 concurrent requests on your application, you will have each request a thread assigned to it. This brings a huge problem for concurrency, because if you have more concurrent requests than your thread pool, requests will start to hang until another processing thread is free. 
 
-Here's a diagram which shows threads being stacked on waiting the databse for a response:
+Here's a diagram which shows threads being stacked on waiting the database for a response:
 
 ![Threads Waiting Database Response Example Diagram](static/diagrams/threads_waiting.png)
 
